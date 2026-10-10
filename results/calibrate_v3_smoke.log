@@ -1,0 +1,17 @@
+C_ref (v2 curve) = 0.0784   F_ref (v2 forecast) = 0.02437   J(v2) = 2.0000
+  gen   1  J=2.0000  conv=0.000  t=167s
+DE done: J=2.0000 nfev=56 t=167s; Powell fine-search (5 evals)...
+Powell: J=2.0000 (kept DE) t=172s
+
+Fair check: mean |population error| (%) by forecast horizon, origins 2014..2022
+  h        BAU         v2         v3
+  1      0.089      0.204      0.204
+  2      0.147      0.401      0.401
+  3      0.198      0.584      0.584
+  4      0.254      0.753      0.753
+  5      0.312      0.915      0.915
+
+whole-curve test NRMSD (no restart): {'BAU': 0.1632, 'v2': 0.101, 'v3': 0.101}
+2026 population (restart 2023): 8.3476 B
+
+v3 params: {'alic': 13.9898, 'alsc': 28.0899, 'icor': 3.0262, 'pptd': 149.4737, 'imef': 0.0584, 'nri': 2510565841848.4766, 'uildt': 10.367, 'hsid': 13.8801, 'lpd': 28.0399, 'mtfn': 9.7412, 'dcfsn': 4.7808, 'lfpf': 0.7136, 'len': 23.5312, 'sad': 10.4818}

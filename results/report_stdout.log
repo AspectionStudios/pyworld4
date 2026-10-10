@@ -1,0 +1,114 @@
+# World3-03 calibrated to observed data (v2: + UN age structure, restart from data, range of outcomes)
+
+_Generated 2026-10-09T22:52:25-0700 · model: PyWorld3-03 @ `1f1b2f40` · data manifest sha256 `ee7c726dc1a4` · optimizer nfev=16912, 150 generations, 981s_
+
+## Fit quality (weighted NRMSD over all targets, lower is better)
+
+| Scenario | Train 1970–2014 | **Test 2015–latest (held out)** |
+|---|---|---|
+| BAU (World3-03 default) | 0.1089 | **0.1632** |
+| Recalibration23 (Nebel 2023) | 0.1092 | **0.2032** |
+| Calibrated v1 (previous run) | 0.0856 | **0.1030** |
+| Calibrated v2 (this run) | 0.0784 | **0.1010** |
+| Calibrated v2 + restart at 2014 (observed age groups) | 0.0775 | **0.0713** |
+| BAU + restart at 2014 (observed age groups) | 0.1079 | **0.1234** |
+
+The *restart at 2014* rows swap in the observed age groups at the end of training, so 2015–latest is still unseen.
+
+## Population: held-out error by year (%)
+
+| Year | UN observed | Calibrated v2, no restart | Calibrated v2 + restart 2014 | BAU + restart 2014 | BAU, no restart |
+|---|---|---|---|---|---|
+| 2015 | 7.4705 B | -1.213% | +0.189% | -0.035% | -4.432% |
+| 2016 | 7.5586 B | -1.432% | +0.344% | -0.079% | -4.728% |
+| 2017 | 7.6456 B | -1.646% | +0.473% | -0.141% | -5.035% |
+| 2018 | 7.7299 B | -1.832% | +0.601% | -0.202% | -5.329% |
+| 2019 | 7.8113 B | -1.991% | +0.732% | -0.285% | -5.640% |
+| 2020 | 7.8870 B | -2.090% | +0.903% | -0.355% | -5.921% |
+| 2021 | 7.9544 B | -2.099% | +1.147% | -0.376% | -6.140% |
+| 2022 | 8.0214 B | -2.115% | +1.368% | -0.446% | -6.389% |
+| 2023 | 8.0917 B | -2.181% | +1.521% | -0.608% | -6.711% |
+
+| Summary | Calibrated v2, no restart | Calibrated v2 + restart 2014 | BAU + restart 2014 | BAU, no restart |
+|---|---|---|---|---|
+| max abs. error | 2.181% | 1.521% | 0.608% | 6.711% |
+| mean abs. error | 1.844% | 0.809% | 0.281% | 5.592% |
+
+### Per target (test-window NRMSD)
+
+| Target | weight | last obs. | BAU (World3-03 default) | Recalibration23 (Nebel 2023) | Calibrated v1 (previous run) | Calibrated v2 (this run) | Calibrated v2 + restart at 2014 (observed age groups) |
+|---|---|---|---|---|---|---|---|
+| Population | 1.0 | 2023 | 0.0568 | 0.0616 | 0.0025 | 0.0189 | 0.0094 |
+| Population aged 0-14 (UN WPP) | 0.25 | 2023 | 0.1089 | 0.1860 | 0.0061 | 0.0162 | 0.0152 |
+| Population aged 15-44 (UN WPP) | 0.25 | 2023 | 0.1393 | 0.1465 | 0.1018 | 0.1036 | 0.0116 |
+| Population aged 45-64 (UN WPP) | 0.25 | 2023 | 0.0891 | 0.0706 | 0.0682 | 0.0776 | 0.0099 |
+| Population aged 65+ (UN WPP) | 0.25 | 2023 | 0.5678 | 0.7341 | 0.6358 | 0.5184 | 0.1379 |
+| Life expectancy | 0.5 | 2023 | 0.0531 | 0.1604 | 0.0782 | 0.0178 | 0.0189 |
+| Crude birth rate | 0.5 | 2023 | 0.1081 | 0.2865 | 0.0354 | 0.0522 | 0.0947 |
+| Crude death rate | 0.5 | 2023 | 0.1363 | 0.0919 | 0.0759 | 0.2306 | 0.0662 |
+| Industrial output (industry value added, const. 2015 US$) | 0.5 | 2025 | 0.2008 | 0.3241 | 0.0795 | 0.0506 | 0.0520 |
+| Service output (services value added, const. 2015 US$) | 0.5 | 2024 | 0.1124 | 0.1559 | 0.0734 | 0.0457 | 0.0465 |
+| Food per capita (FAO kcal/cap/day) | 0.7 | 2023 | 0.1669 | 0.1238 | 0.1226 | 0.1144 | 0.1367 |
+| Persistent pollution (CO2 ppm above 280) | 0.5 | 2025 | 0.5286 | 0.4111 | 0.1413 | 0.2360 | 0.2360 |
+| Nonrenewable resource use (fossil fuel TWh) | 0.5 | 2025 | 0.0843 | 0.2247 | 0.2115 | 0.0634 | 0.0726 |
+
+## Parameters
+
+| Param | World3-03 default | Recalibration23 | v1 | **v2** | bounds |
+|---|---|---|---|---|---|
+| `alic` | 14 | 15.24 | 11.43 | **13.99** | [8, 25] |
+| `alsc` | 20 | — | 27.73 | **28.09** | [10, 30] |
+| `icor` | 3 | — | 2.707 | **3.026** | [2, 4.5] |
+| `pptd` | 20 | 116.4 | 142.9 | **149.5** | [20, 150] |
+| `imef` | 0.1 | 0.1102 | 0.07281 | **0.05845** | [0.05, 0.25] |
+| `nri` | 1e+12 | 1.302e+12 | 2.582e+12 | **2.511e+12** | [7e+11, 3e+12] |
+| `uildt` | 10 | 0.533 | 11.77 | **10.37** | [0.5, 15] |
+| `hsid` | 20 | 38.24 | 11.35 | **13.88** | [10, 50] |
+| `lpd` | 20 | 33.84 | 37.7 | **28.04** | [10, 50] |
+| `mtfn` | 12 | 9.454 | 8.577 | **9.741** | [8, 14] |
+| `dcfsn` | 3.8 | — | 4.08 | **4.781** | [2.5, 5] |
+| `lfpf` | 0.75 | 1.022 | 0.7416 | **0.7136** | [0.55, 0.9] |
+| `len` | 28 | — | — | **23.53** | [20, 40] |
+| `sad` | 20 | 13.38 | 13.38 | **10.48** | [5, 30] |
+
+## 2026 figures (calibrated v2, restarted from observed 2023 age groups)
+
+> 2026 hasn't been fully observed yet, so the UN column is the **UN WPP2024 Medium-variant projection**, not an observation.
+
+| Variable | Model 2026 | UN WPP2024 projection 2026 | difference |
+|---|---|---|---|
+| Total population | 8.3476 B | 8.3007 B | +0.57% |
+| 0–14 | 2.0576 B | 1.9993 B | +2.92% |
+| 15–44 | 3.6040 B | 3.6550 B | -1.39% |
+| 45–64 | 1.7485 B | 1.7662 B | -1.00% |
+| 65+ | 0.9374 B | 0.8802 B | +6.50% |
+
+## Range of outcomes (GLUE (Beven & Binley 1992)): 116 equally good parameter sets
+
+_accepted 116/1501 sets with train NRMSD <= 0.0862 (best 0.0784 * 1.10)_
+
+| Variable (2026) | 5% | median | 95% |
+|---|---|---|---|
+| Population (B) | 8.2973 | 8.3434 | 8.4019 |
+| Life expectancy (yr) | 68.4 | 71.0 | 73.4 |
+| Birth rate | 16.82 | 18.04 | 19.85 |
+| Death rate | 7.55 | 8.12 | 8.96 |
+
+| Peak year | 5% | median | 95% |
+|---|---|---|---|
+| `pop` | 2039 | 2042 | 2046 |
+| `io` | 2036 | 2040 | 2043 |
+| `f` | 2026 | 2030 | 2033 |
+| `ppolx` | 2100 | 2100 | 2100 |
+
+> The range covers **parameter** uncertainty only. Structural error in the model (food per capita, fossil fuel use) isn't included, so the real uncertainty is wider.
+
+![ensemble](fig_ensemble.png)
+
+
+![restart validation](fig_restart_validation.png)
+
+![targets](fig_targets.png)
+
+![standard run](fig_world3_standard.png)
+

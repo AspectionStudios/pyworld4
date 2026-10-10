@@ -1,0 +1,492 @@
+DOI: 10.1111/jiec.13442
+RESEARCH ARTICLE
+Recalibration of limits to growth
+An update of the World3 model
+Arjuna Nebel Alexander Kling Ruben Willamowski Tim Schell
+Cologne Institute for Renewable Energy, TH
+Köln – University of Applied Sciences, Köln,
+Germany
+Correspondence
+Arjuna Nebel, TH Köln, Köln, NRW, 50679,
+Germany.
+Email: arjuna.nebel@th-koeln.de
+Editor Managing Review: Ichiro Daigo
+Funding information
+Paderborn Center for Parallel Computing
+(PC2)
+Abstract
+After 50 years, there is still an ongoing debate about the Limits to Growth (LtG) study.
+This paper recalibrates the 2005 World3-03 model. The input parameters are changed
+to better match empirical data on world development. An iterative method is used to
+compute and optimize different parameter sets. This improved parameter set results in
+a World3 simulation that shows the same overshoot and collapse mode in the coming
+decade as the original business as usual scenario of the LtG standard run. The main
+effect of the recalibration update is to raise the peaks of most variables and move them
+a few years into the future. The parameters with the largest relative changes are those
+related to industrial capital lifetime, pollution transmission delay, and urban-industrial
+land development time.
+KEYWORDS
+crisis, industrial ecology, Limits to Growth, overshoot and collapse, system dynamics, World3
+1 INTRODUCTION
+The Limits to Growth (LtG) is the name of a study conducted in the late 1960s for the Club of Rome. A group of researchers at the Massachusetts
+Institute of T echnology developed a computer model that simulated some of the world’s most important material variables, such as population, food
+production, resource use, and environmental impact. A total of 12 scenarios were presented in 1972 in the first book of the same name (Meadows
+et al., 1972). The scenarios cover the period from 1900 to 2100. The authors emphasize that the scenarios are not predictions. Rather, they are
+intended to illustrate the complex interrelationships within a dynamic system based on exponential growth.
+The first and probably best known scenario is called the “standard run” or “business as usual” (BAU), which shows an exponential growth dynamic
+of the system and leads to the overshoot and collapse mode triggered by the depletion of non-renewable resources. The other scenarios describe
+changes in the parameterization of the model and assumptions about technological and societal developments. In the scenario called business as
+usual 2 (BAU2), twice as many initial non-renewable resources (NRI) were assumed and recycling technologies were implemented. These changes
+result in a different trajectory for each variable, but do not change the overshoot and collapse mode. The collapse in this case is caused by excessive
+pollution (Meadows et al., 1972). The scenario comprehensive technology (CT) assumes a very broad application of technological solutions. Thus, the
+pollution rate is greatly reduced, crop yields on agricultural land are greatly increased, and resource efficiency is set above all historical value s
+(Herrington, 2021). The basic dynamics in this scenario are different from those mentioned above. The industrial variables as well as the food
+production still show exponential growth, but the population growth slows down and reaches a plateau from the middle of the analyzed time period.
+In this scenario, the collapse is postponed to the end of the time period under consideration, but there are some steep downward slopes at the end
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided
+the original work is properly cited.
+© 2023 The Authors. Journal of Industrial Ecology published by Wiley Periodicals LLC on behalf of International Society for Industrial Ecology.
+Journal of Industrial Ecology 2024;28:87–99. wileyonlinelibrary.com/journal/jiec 87
+88 NEBEL ET AL .
+(Meadows et al., 1972). The stabilized world (SW) scenario models a future state in which world population, industrial production, and resource
+consumption reach a steady state, resulting in a sustainable balance between human society and the environment. It is the only scenario in which
+the model variables are not in an overshoot and collapse mode (Meadows et al.,2005).
+1.1 The World3 model
+The model used in LtG is called World3 and is implemented in a system dynamics framework. System dynamics is a methodology for understanding
+complex systems and their behavior over time (Forrester, 1971). The full technical description of the World3 model was published in 1974 in the
+book The Dynamics of Growth in a Finite World by Meadows et al. (1974). There have been other major updates to the LtG. The most important was
+described in the book Limits to Growth the 30- Y ears Update(Meadows et al., 2005). In this update, a new adaptive technology sector was added to
+the model, now called World3-03, as well as two newly introduced world variables: ecological footprint (EF) and human welfare index (HWI). The
+standard run scenario in this book is calledbusiness as usual 1 (BAU), the scenario with the assumption of more abundant resources is labeled BAU2.
+The World3 model consists of the following five interrelated sectors:
+∙ Population
+∙ Capital
+∙ Agriculture
+∙ Non-renewable resources
+∙ Pollution
+There are two main positive feedback loops responsible for the exponential growth dynamics of the model. A larger population leads to a higher
+birth rate with a 15–30 year delay, and a higher investment rate leads to more industrial capital, which in turn allows for higher investment. But
+there are also limiting elements in other sectors. An example is the maximum arable land available for food production, or the assumption about the
+non-renewable resources needed for both food and industrial production (Meadows et al., 1974).
+1.2 Reviews and critics
+Since the publication of LtG, countless reviews, critiques, and statements have been written on the subject. Some of these are briefly presented
+here. A more comprehensive overview of the LtG debate can be found in Jackson and Webster (2016). The authors summarize the debate since the
+1970s and relate the topic to modern concepts such as the Planetary Boundaries of Rockström et al. (2009).
+Turner (2008) found that 30 years of historical data best fit the standard run scenario of the original World3 model. An update of this study in
+2012 concluded that even after 40 years of empirical data, the standard run is still the best fitting scenario. The authors also analyzed the causes of
+the collapse seen in the model’s results and related them to the peak oil debate (Turner,2012).
+T h el a t e s td a t ac o m p a r i s o nb yH e r r i n g t o n(2021) was made with the 2005 version of the World3 model, including the newly introduced variables
+HWI and ecological footprint. The author found that, in contrast to previous comparisons, the closest matching scenarios were BAU2 and CT. These
+divergent results may also be due to slightly different comparison parameters and the use of the 1972 version of World3 by Turner (2008)a n dt h e
+updated 2005 version of the model by Herrington (2021).
+LtG was also subject to much criticism, for example, by Rubin and Lomborg (2003). A good overview is given in the bookLimits to Growthrevisited
+by Bardi ( 2011). The author describes that early criticisms of LtG often referred to overly pessimistic assumptions about, for example, available
+agricultural land or mineral resources. Over time, this has been disproved by real-world developments or extraction technology that is still lack-
+ing behind what the critics expected at that time. The methodology of system dynamics was also criticized for its ability to do “measurements
+without data” (Nordhaus, 1973). Major criticism also stems from neo-liberal economists (Jacques et al., 2008). They claim that the authors of LtG
+underestimated human ingenuity and the ability to develop technologies, that would solve any impending crisis or scarcity. The effects of a market-
+based society were also not taken into account enough, that is, the incentive to find alternatives, triggered by scarcity and thus increasing prices of
+resources (Norgard et al., 2010).
+Many of these critics focus on one single scenario and interpret it as an exact prediction of the future. The authors of LtG have always empha-
+sized that their scenarios are not exact predictions. Above all, the main goal of LtG is to show the behavior of a complex dynamic system and
+describe possible developments on the basis of different scenarios. One of the core statements of LtG is also the plurality of limits and that
+the overshoot and collapse dynamics remained, even with different boundary conditions, political interventions and assumptions (Herrington,
+2021).
+NEBEL ET AL . 89
+1.3 Motivation
+As described in the review section, the debate around the actuality of the LtG is still ongoing. The authors’ warnings in 1972 about reaching various
+of Earth’s system boundaries were largely ignored. Fifty years later, some vulnerable limits described by the framework of planetary boundaries
+have already been crossed (Persson et al., 2022).
+Previous data comparisons of model data with the measurable variables of the Earth still showed a high degree of similarity. For this paper, the
+existing approach of only comparing the data should be extended. Since the model was calibrated with the limited capabilities in terms of computing
+power and data processing in 1972, it seems interesting to what extent a recalibration of the model is possible and what are the effects of such
+a recalibration. The data situation has improved enormously since then and furthermore the model can be run multiple times using the algorithm
+developed here, to heuristically approach an optimal parameter configuration. Another point is that the peak of the original BAU scenario should
+fall approximately in the present time. Therefore, a parameter update could also provide relevant information on what the model indicates about
+the general dynamics of global material and socio-economic developments in the future, such as the approximate timing of the onset and main cause
+of a collapse.
+This leads to the following question for this paper: Which parameters need to be adjusted to make the World3-03 model more consistent with
+today’s empirical data, and what would the resulting scenario look like?
+For this purpose, the methodology is presented in Section 2. This includes the Python implementation of the World3 model and the update of
+it. Furthermore, the presentation of the data basis and finally the heuristics according to which the model parameters were recalibrated. Section 3
+presents the results. Some of the changed parameters are discussed and a new scenario is shown. Furthermore, the robustness of the results and a
+sensitivity analysis are discussed. Finally, the results are discussed in Section4.
+2 METHODS
+T oday, extensive online data sources and powerful computers allow for more accurate and faster modeling and data comparison than was possible
+in 1972. This paper takes advantage of this by using a Python implementation of Vanwynsberghe ( 2021) as a base model and updating it to the
+latest version of World3. The model data (MD) is then compared to the empirical data (ED) using a statistical measure to determine the difference.
+T o minimize the divergence, selected parameters are varied and the results are iteratively improved.
+2.1 PyWorld3 update
+The PyWorld3 model is a Python implementation of the World3 model (Vanwynsberghe, 2021). It is based on the technical description (Meadows
+et al., 1974). Thus PyWorld3 reflects the World3 version from the first book in theLimits to Growthseries. In order to obtain actual results, PyWorld3
+is updated to the version used in the book “ Limits to Growth: The 30- Y ear Update” (Meadows et al., 2005). This book includes a CD with the updated
+version of World3, written in the programming language STELLA. This version is used to update PyWorld3 to the 2005 edition “PyWorld3-03.” The
+code of the developed PyWorld3-03 is published and can be found in GitHub ( https://github.com/TimSchell98/PyWorld3-03). The basic function-
+ality of PyWorld3 is still available, since nothing fundamental has been changed. Only the variables and the equations connecting the variables have
+been updated to the World3-03 version of 2005.
+2.2 Empirical data
+For comparison and recalibration, it is essential to have appropriate and accurate empirical data (ED). Therefore, a comparison variable for each
+sector, such as CO2 concentration for pollution, and the associated data must be selected. The scope of the ED of this study is comparable to that of
+Herrington (2021). Most of its procedures fit the inputs required here. Several data sets have been adopted and updated. This selection is explained
+below for each of the sectors.
+Population data is available at The World Bank ( 2023b). Since the model uses the number of people to represent the population, no conversion
+is required.
+Industrial output (IO) data measured in dollar equivalent per person per year in LtG (Meadows et al., 1972) is not an existing empirical data
+set. Therefore the Index of Industrial Production (IIP) is used as proxy. It details the growth of the capacity of industrial production, excluding
+price fluctuations (United Nations Industrial Development Organization, 2023b). The data is only available for each country, but not globally at
+United Nations Industrial Development Organization (2023a). It is based on the year 2015 (United Nations Industrial Development Organization,
+90 NEBEL ET AL .
+2023b), which means that the value for each country in the year 2015 is 100. Therefore, the national manufacturing value added is used as the
+weight, also accessed from United Nations Industrial Development Organization (2023c). T o compare the IO of LtG with the weighted index using
+a statistical measure, a conversation is required. Due to two different units, the relative change for each year, here called the change rate (CR), is
+calculated. Equation (1) shows the calculation of the change rate for the yeart.
+CRt = EDt − EDt−1EDt−1 (1)
+Food per capita is originally expressed in vegetable equivalents (Meadows et al., 1972). The empirical data use kilocalories per person per day
+(FAO, 2023). The conversion factor of 3500 kilocalories per kilogram of vegetable food is applied, as in the description of LtG (Meadows et al.,
+1974). However, since the two graphs are still shifted on the y-axis, the change rate method is also used to compare the modeled data with the
+empirical data.
+Pollution, expressed in pollution units (Meadows et al., 1972), includes all substances emitted into the environment. T o approximate the data
+set, the CO2 concentration is used as a proxy. CO2 is usually emitted when other pollutants occur. It is also the most commonly used measure when
+talking about pollution. The data for the global CO2 concentration in ppm is available from Lan et al. (2023). The change rate method is used because
+the units of the two data sets are different.
+Non-renewable resources, measured in resource units Meadows et al. ( 1972), include all non-renewable resources on Earth. The exact amount is
+not known and probably never will be. Since this implies the use of the change rate method for this sector, a derivation of the variable can be used
+instead of absolute values. In order to provide suitable and accurate data, fossil fuel consumption is chosen. Although this proxy does not include
+metal resources, it is the most appropriate and available data. The data set is derived from Our World in Data (2022) with reference to Vaclav Smil
+(2016)a n db p(2022).
+Service per capita, used in LtG (Meadows et al., 1972) is measured in dollars and combines all expenditures in the service sector, such as medical
+care and education. The education index is used to emulate this sector. Although it captures only part of the sector, it is the best available proxy. Edu-
+cation is one of the main components of the service sector and is correlated with the rest of the sector. The data is taken from Human Development
+Reports (2022a) and the change rate method is used.
+Human welfare is detailed by the Human Development Index (HDI). Since World3-03 it is part of the model, so it is also calculated in this updated
+version of PyWorld3-03 and can be compared directly. The United Nations Development Program calculates and publishes the data (Human
+Development Reports, 2022b).
+Ecological footprint(EF) is also part of the model. The empirical data is taken from York University Ecological Footprint Initiative & Global Footprint
+Network (2022) and can be directly compared with the modeled data.
+The industrial output, food, pollution, resource, and service data are smoothed. T o reduce unwanted high frequency fluctuations in the data sets
+and to avoid any phase shift into the future, the sectors are averaged using a filter applied in both time directions.
+2.3 Recalibration process
+T o determine the accuracy between the model data (MD) and the empirical data (ED), the normalized root mean square deviation (NRMSD) is used
+(Turner,2012). This statistical measure of difference normalizes the root mean square to the ED, which allows different sectors to be compared. The
+calculations are performed at a 1-year interval, which is the step size t of the model and the empirical data. The deviation is calculated for N times,
+depending on the number of data steps available. Equation (2) shows an example of a calculation starting in 1970 (Herrington,2021).
+NRMSD=
+√∑N
+t=0(MD1970+t− ED1970+t )2
+N
+∑N
+t=0(ED1970+t )
+N
+(2)
+NRMSD is calculated for each sector of the model using the most recent data for the last 50 years. For the services sector, only 30 years of data
+are available and therefore calculated. T o provide a single measure of quality for a given set of parameters, the NRMSD total is implemented. It is
+calculated by weighting the NRMSD of each variable by a selected factor and then taking the mean. The weighting is based on the accuracy of the
+data. Therefore, the variables are weighted as follows:
+ Population= 1  Non-renewable resources= 0.5
+ Industrial output= 0.5  Service per capita= 0.5
+ Food per capita= 0.7  Human welfare= 0.7
+ Pollution= 0.5  Ecological footprint= 0.7
+NEBEL ET AL . 91
+FIGURE 1 Flow chart of the used algorithm to find an optimal parameter set.
+The model best represents the empirical data when the NRMSD is minimal. T o find an optimal parameter set, a Python script was created to run
+multiple simulations in PyWorld3-03. For the script, 35 of the model parameters are selected for possible recalibration. Some parameters, such as
+the initial population in 1900, are not considered because they are already observed values and should not be changed.
+The main results of this paper will be referred to as “Recalibration23.” Figure 1 shows the flow chart to determine the desired recalibration of
+the parameter sets. The first iteration starts with the default values from BAU2. The range in which each parameter can be varied in the course of
+one iteration is set to a predefined value of 50% and 150%. Another predefined setting called “grid resolution” divides the range between the start
+92 NEBEL ET AL .
+FIGURE 2 Normalized root mean square deviation course from Recalibration23 over the iterations. The underlying data for this figure are
+available in T ableS2 of Supporting Information S1.
+TABLE 1 Normalized root mean square deviation comparison: Recalibration23, business as usual (BAU), and business as usual 2 (BAU2).
+Sector Recalibration23 BAU BAU2
+T otal 0.2719 0.3318 0.3474
+Population 0.0183 0.0213 0.0237
+Industrial output 0.4740 0.8062 1.5463
+Food per capita 1.1079 1.0589 0.9911
+Pollution 0.3371 0.6753 0.3873
+Non-renewable resources 0.7571 0.7027 0.8729
+Service per capita 0.6188 0.9289 1.0103
+Human welfare 0.1783 0.089 0.1121
+Ecological footprint 0.3425 0.4622 0.3337
+and end values. In Recalibration23 this setting is set to 60. With these and the default values of the other parameters, the PyWorld3-03 simulation
+is run.
+The NRMSD is calculated for each simulation. After each parameter is changed, the parameter set with the lowest NRMSD is saved and used
+for the next iteration. After the first iteration, the values before and after the optimal parameter value from the last iteration are used as the start
+and end values. If the optimal parameter value is either below the start value or above the end value, the range is expanded. When a certain end
+condition is reached, the analysis stops. The end condition can be either the number of iterations or the difference between the NRMSD of the
+current iteration and the last iteration.
+The course of the minimal NRMSD of Recalibration23 over the iterations is shown in Figure 2. The NRMSD decreases sharply in the first 20
+iterations. After that, the graph converges to the lowest possible NRMSD for the chosen settings. In this case, the minimal NRMSD is about 0.28.
+3 RESULTS
+Using this approach, a set of parameters is calculated, which are shown and explained in this section. Sensitivity analyses were also performed by
+changing the initial parameters and the weighting.
+3.1 Recalibration23
+The recalibrated parameter set improves the NRMSD by 18.05%, from 0.3318 in the BAU scenario to 0.2719 in the Recalibration23 scenario. All
+NRMSD values are shown in T able1. The modified parameters with their full names, default values, improved values, and relative change are shown
+in T able2. In addition, a graph of key variables from the Recalibration23 scenario is shown in Figure 3. Graphs comparing the variables population
+NEBEL ET AL . 93
+TABLE 2 Parameters with improved and default values and relative change of Recalibration23.
+Parameter Full name Default value Improved value Relative change [%]
+alic1 Average lifetime of industrial capital 1 2.00 15.24 662.15
+pptd Persistent pollution transmission delay 20.00 116.38 481.92
+hsid Health services impact delay 20.00 38.24 91.18
+lpd lLifetime perception delay 20.00 33.84 69.20
+ppgf1 Persistent pollution Gen Fact 1 1.00 1.53 53.44
+lfpf Labor force participation fraction 0.75 1.02 36.21
+alln Average life of land normal 1000.00 1351.20 35.12
+palt Potentially arable land total 3.20E+09 4.22E+09 31.77
+nri Non-renewable resources initial 1.00E +12 1.30E +12 30.23
+imti Industrial material toxic index 10.00 11.06 10.64
+imef Industrial material emission factor 0.10 0.11 10.17
+pl Processing loss 0.10 0.10 4.05
+frpm Effective fraction of resource utilization on pollution generation 0.02 0.02 3.34
+sfpc Subsistence food per capita 230.00 233.69 1.61
+faipm Effective fraction of agricultural pollution input 0.001 0.001 −5.60
+sd Social discount 0.07 0.06 −13.64
+mtfn Maximum total fertility normal 12.00 9.45 −21.22
+amti Agricultural material toxicity index 1.00 0.77 −23.13
+sad Social adjustment delay 20.00 13.38 −33.08
+fspd Food shortage perception delay 2.00 0.61 −69.42
+uildt Urban-industrial land development time 10.00 0.53 −94.67
+FIGURE 3 Recalibration23, improved run compared to BAU. The underlying data for this figure are available in T ableS3 of Supporting
+Information S1.
+94 NEBEL ET AL .
+FIGURE 4 Empirical data, original business
+as usual and business as usual 2 scenario, and
+the new Recalibration23 scenario are plotted
+for the variable population. The underlying
+data for this figure are available in T ableS4 of
+Supporting Information S1.
+FIGURE 5 Empirical data, original business
+as usual and business as usual 2 scenario, and
+the new Recalibration23 scenario are plotted
+for the variable Human Welfare Index. The
+underlying data for this figure are available in
+Ta b l eS5 of Supporting Information S1.
+(Figure 4)a n dH W I( F i g u r e5) of the scenarios Recalibration23, BAU, and BAU2 are discussed.
+Figure 3 shows not only the results of specific Recalibration23 variables, but also the values of the same variables from the 2005 reference run
+(BAU). The rough trajectories of non-renewable resources, industrial output, and food do not differ much from BAU. Only the timing and height of
+the peaks are different. The food peak is higher and shifts a few years into the future. A similar behavior can be seen in the industrial curve, the
+peak rises, but moves into the past. The initial resource value is higher than in BAU, but the curve of the graph still follows the same course and
+the approximate value of this variable for today is almost the same. The population curve is almost identical to BAU. The biggest difference is in
+the trajectory of the pollution. The peak of the curve declines and shifts about 50 years into the future. A further explanation of the variables that
+contribute to this changed trajectory is given in Section 4.
+In addition to this “standard graph,” which can be found in every LtG publication, specific graphs are created showing the population (see Figure4)
+a n dt h eH W I( s e eF i g u r e5) of the newly created parameter set, BAU, BAU2, and empirical data. Figure4 shows that each scenario is very similar to
+the empirical data of the human population. This is also visible in T able1. The NRMSD of the population sector is the smallest in every scenario. The
+Recalibration23 scenario has the lowest NRMSD, followed by the BAU scenario.
+Figure 5 shows a seemingly contradictory graph. The basic course of the HWI is very similar in all scenarios, except for the rebound peak in the
+BAU2 scenario. However, the BAU scenario shows the smallest deviation from the empirical data. The Recalibrated23 parameter set results in a
+NEBEL ET AL . 95
+relatively large difference. This deviation can be seen in T able 1. The total NRMSD of the main results is still the smallest of the three scenarios,
+because the NRMSD of the other sectors is similar or smaller compared to both BAU scenarios.
+In the recalibration algorithm, most parameters are improved only once or twice, while a few are improved dozens of times. The parameter
+“average lifetime of industrial capital 1” (alic1) has the highest relative change. The improved value is more than six times the default value. The
+value changes from 2 to 15.24 years. The second highest relative change has the persistent pollution transmission delay (pptd). This parameter
+increases from 20 to 111.8 years.
+3.2 Comparison with BAU and BAU2
+Previous research by Turner (2012) and Herrington ( 2021) compared model results with empirical data. This paper focuses primarily on a recali-
+bration of the model, but comparisons of empirical data with the BAU and BAU2 scenarios are also carried out. T able1 shows these results for the
+individual sectors. Overall NRMSD results differ by only 0.0156 between BAU and BAU2, but according to our method used and our calculation
+BAU is more consistent with the empirical data.
+A closer look at the individual sectors reveals greater differences. In the variables population and food per capita, the two scenarios are very
+close to each other. Industrial output and pollution differ significantly more, with the former matching closer to BAU and the latter to BAU2. For
+non-renewable resources, the difference in NRMSD is about 0.17. BAU is closer to the empirical data here. BAU2 assumes twice as many resources
+as well as existing recycling technology and does not end in collapse due to a lack of resources. Special attention can be paid to this. However,
+both the differences in the opposite direction and the weighting mentioned above lead to the fact that the two scenarios differ only slightly in the
+overall result.
+3.3 Sensitivity analysis
+In addition to Recalibration23, several other optimizations are performed. First, a sensitivity to different weightings in the NRMSD calculation and
+second, a variation of the start values.
+T o measure how robust the analysis is to changes in the weighting system, two alternative weightings are analyzed. The first is an inverse
+weighting in which the population, HWI, and EF are weighted lower. The second alternative weighting increases the values of the variables
+compared with the change rate method. The change rate method uses Equation ( 1) to compare two data sets of ED and MD when they have
+different units. As expected, the changes in weighting have an impact on the optimization of each sector; the higher a sector is weighted,
+the greater its impact on minimizing the total NRMSD. However, the two weighting variations tested resulted in a higher overall NRMSD,
+even though individual sectors had lower NRMSDs in some cases. The weighting chosen in Recalibration23 can therefore be considered
+reasonable.
+T o investigate the influence of the initial NRI value on the results, the recalibration is performed with doubled, halved, and the same initial NRI
+values as in the BAU scenario. This investigation shows that the initial values of each parameter have an influence on the recalibration result. With
+the BAU initial value, an optimized parameter set is calculated in which the final NRI is set even slightly lower than its starting point. The halved
+initial value had almost no effect on the result, as the NRI was set to a value almost identical to the original initial value. The double initial value, a s
+in BAU2, provides a recalibration result with a value between the two scenarios for the NRI parameter. The total NRMSD is actually slightly lower
+than what can be achieved with the default NRI start value from BAU.
+As a result of this sensitivity analysis, it is clear that both the initial values and the weightings have an impact on the results. Each new combina-
+tion represents a new optimization problem for the heuristic, resulting in a different set of parameters. Depending on the initial variables and the
+weighting, the recalibration starts in a different direction, that is, with different parameters. It is possible to find a local minimum of the NRMSD that
+is not the global one. T o be confident that the best possible set of parameters has been found, several recalibrations are performed with different
+settings. The comparisons show that the minima are within a small range. It is likely that there are other combinations than those considered here
+that could lead to an even lower NRMSD, and it is always possible to obtain only a local minimum of the NRMSD. However, a systematic search of
+the solution space is beyond the scope of this paper.
+The sensitivity of the World3 model to a change in initial parameters has been a source of criticism since the beginning of the LtG study
+(Castro, 2012; de Jongh, 1978; Vermeulen & de Jongh, 1976). But as Turner ( 2013) and Herrington ( 2022) argue, it is the dynamics of the sys-
+tem that is most important, not the value of a particular parameter at a particular point in time. All of the sensitivity calculations mentioned
+here show a similar overshoot and collapse pattern for the key variables, that is, they are robust to the parameter variations done in this
+paper.
+96 NEBEL ET AL .
+4 DISCUSSION
+The discussion is divided into three parts. The first part analyzes the results from 1900 to the present. The second part points out the limitations.
+Finally, the third part gives an outlook on future trends.
+4.1 World3 and empirical data
+In response to the key question, a new set of recalibrated parameters is presented that models the empirical data more closely than the original
+1972 model. Since the studies by Turner ( 2012) and Herrington ( 2021) differ slightly, an additional question is whether BAU or BAU2 is closer to
+today’s data. For this purpose, the two scenarios are compared using NRMSD as a statistical measure. In T able 1, the results show that with the
+weighting chosen in this paper, BAU is slightly closer to the empirical data than BAU2. Only the pollution sector of BAU2 is significantly more accu-
+rate. On the other hand, the NRMSD of the resource sector of BAU is lower. In summary, the empirical data fit best somewhere between BAU and
+BAU2. With the new parameter set of Recalibration23, the overall NRMSD is greatly improved compared to the difference between BAU and BAU2.
+The population collapse shown in Figure 3 occurs a few years later with a higher number of people. The most significant change is the shift of
+the pollution curve. It peaks about 50 years later and reaches a higher value. The reason for the collapse in the recalibrated model is still resource
+depletion as in BAU, not pollution overshoot as in BAU2. This corresponds to the work of Turner (2012).
+The industrial sector in the recalibrated model remains close to BAU. According to the industrial output graph in Figure 3, the peak has been
+reached today. This is in line with the observed data, as the IIP also shows declining growth in recent years, although a turning point is not yet
+visible. Accordingly, the parameters of the capital sector do not change in a wide range. For example, “industrial capital-output ratio 1” and “income
+expectation averaging time” are not changed. In BAU and the new scenario, decreasing industrial output is associated with a food shortage. With
+less industrial output, “total agriculture investment” decreases, among other things (Meadows et al., 1972). As a consequence, the whole system
+collapses and the death rate rises. In contrast to BAU, in the recalibrated model food is available for a few more years, shifting the population graph
+evenly on the time axis.
+This turnaround exposed by the data for the Industrial Production Index is also visible in the HWI and in the services sector, since both are related
+to the education index. For these sectors, the data show not only declining growth, but already an absolute decline. The HWI starts decreasing in
+the year 2019, see Figure 5 (Human Development Reports, 2022b) and the education index begins to fall in the year 2021 (Human Development
+Reports, 2022a). Furthermore the death rate increases in 2020 for the first time since 1964 (The World Bank,2023a). In the World3 model the HWI
+is calculated as the average of three indices: “lei” (life expectancy index), “ei” (education index), and “gdpi” (gross domestic production index). The
+first index, “lei,” is based on perceived life expectancy, while the other two indices, “ei” and “gdpi,” are based on gross domestic production.
+Although the model suggests and the data indicates LtG, the origin is ambiguous. The resource and pollution sectors, which could be the ori-
+gin in regard to LtG, are the most inaccurate data sets. The recalibrated version of World3 delays the pollution problem. Given these limitations,
+it is not entirely clear whether the collapse is caused by climate change resulting from pollution or by resource depletion, as implied by the
+recalibration. The effect of the pollution on the climate and consequently industry is already measurable (IPCC, 2022). Another possibility is the
+resource scarcity as a reason for the visible decline of economic growth. A detailed analysis of this possibility can be found in Turner ( 2012). Here,
+the development of the energy return on energy investment of oil is considered. Its steady decline indicates a gradual depletion of fossil energy
+resources.
+4.2 Limitations
+The biggest limitation is the availability of empirical data. Of course, it is much easier to collect data now than it was in 1972. Still, it is very difficult
+to find data that represent a complete sector of the world. For population, food, the ecological footprint, and the HWI, this is straightforward, as
+explained in Section 2.2. Other sectors such as pollution and services cannot be quantified with a single set of empirical data. Therefore, a proxy
+such as CO 2 concentration or the education index is used. This is an approximation because the proxy only covers part of the sector. Industrial
+production, like others, is included by converting industrial output to dollars and comparing it to the IIP via their change rates. The same applies
+to the resources sector. In addition to the limitations of using the rate of change for comparison, the pollution sector is extremely complex to
+characterize. Many factors such as air pollution, toxics, plastics, and many others affect this sector. The proxy CO2 is chosen because global data are
+available for a long period of time. This simplification may be the reason for the shifted pollution curve, because the emission of CO2 does not cover
+the wide range of pollutants and is not fully represented in the measured atmospheric concentration due to absorption mechanisms. In addition, its
+impact on climate change is delayed and extends far into the future. Analyzing the impact of pollution on the other sectors and exploring a better
+representation in the empirical data could be part of further research in this area.
+NEBEL ET AL . 97
+The recalibration of World3 adds an optimized set of parameters to the model. As a result, the simulation approximates the most recent empirical
+data. Considering the new recalibrated model, the existing limitations are still in force. As mentioned in Section 1.2, the model does not provide an
+exact prediction, but reflects the behavior and trends of a complex dynamic system. The collapse of the system is due to resource depletion in BAU
+or pollution in BAU2. But these two sectors are the most difficult to compare with empirical data. Therefore, especially the accuracy of the timing
+of the peak cannot be relied upon.
+Another uncertainty is the impact of crises, such as the 2008 financial crisis or the Covid-19 pandemic. These are reflected in the empirical data,
+for example, the increase in mortality in 2020 or the decrease in IPP in 2008 and 2020. However, LtG as a model is not able to reproduce these
+short-term events. Rather, it serves to reveal broad trends and dynamics (Meadows et al.,1972).
+4.3 Future trends
+So far, the results have mainly been considered in comparison with the empirical data for the recalibration. However, the course of the variables is
+also interesting in terms of future trends. Here, the model results clearly indicate the imminent end of the exponential growth curve. The excessive
+consumption of resources by industry and industrial agriculture to feed a growing world population is depleting reserves to the point where the
+system is no longer sustainable. Pollution lags behind industrial growth and does not peak until the end of the century. Peaks are followed by sharp
+declines in several characteristics.
+This interconnected collapse, or, as it has been called by Heinberg and Miller ( 2023), polycrisis, occurring between 2024 and 2030 is caused by
+resource depletion, not pollution. The increase in environmental pollution occurs later and with a lower peak (Figure3).
+However, it is important to note that the connections in the model and the recalibration are only valid for the rising edge, as many of the variables
+and equations represented in the model are not physical but socio-economic. It is to be expected that the complex socio-economic relationships will
+be rearranged and reconnected in the event of a collapse. World3 holds the relationships between variables constant. Therefore it is not useful to
+draw further conclusions from the trajectory after the tipping points. Rather, it is important to recognize that there are large uncertainties about
+the trajectory from then on, building models for this could be a whole new field of research.
+The fact is that the recalibrated model again shows the possibility of a collapse of our current system. At the same time, the BAU scenario of the
+1972 model is shown to be alarmingly consistent with the most recently collected empirical data.
+Herrington (2021) also concluded in her data comparison that the world is far from a stabilized world scenario where the overshoot and collapse
+mode is brought to a halt. As a society, we have to admit that despite 50 years of knowledge about the dynamics of the collapse of our life support
+systems, we have failed to initiate a systematic change to prevent this collapse. It is becoming increasingly clear that, despite technological advances,
+the change needed to put us on a different trajectory will also require a change in belief systems, mindsets, and the way we organize our society
+(Irwin, 2015; Wamsler & Brink, 2018).
+At the point of collapse, the resolution of the model also reaches the limit of further plausible statements. The regional differences in demo-
+graphic and economic terms are too great to be reduced to simple, highly aggregated variables. T o address this problem, a new system dynamics
+model has been developed on the occasion of LtG’s 50th anniversary which is called Earth for all (Sandrine Dixson-Decleve et al., 2022). It intro-
+duces a regional resolution and a measure of social inequality and tension. There is also a greater focus on the causes and effects of the climate crisis.
+In Earth4all, the authors no longer focus on scenarios with sharp declines in the main variables. Instead, the scenarioT oo little too latedescribes that
+the effects of the climate crisis will continue to increase and social tensions will rise, causing the well-being index to decline over time. In anothe r
+scenario, Giant leap, it is shown that these negative developments could also be stopped. The authors then propose various policy changes to achieve
+this (Sandrine Dixson-Decleve et al., 2022).
+5 CONCLUSION
+In this paper, the World3 model of the LtG study has been recalibrated to reflect the behavior of empirical data over the last 50 years. For this
+purpose, 35 parameters of the model were selected and optimized for a selected set of eight different empirical data sets that most closely reflect
+historical developments. An algorithm was developed to minimize the aggregated NRMSD between the model data and the empirical data using an
+iterative method. A new scenario with the improved parameter set was presented. Of the original 1972 LtG scenarios, the BAU scenario matches
+these parameters and the evolution of the variables most closely. Like the BAU scenario of the LtG publication, the new scenario Recalibration23
+reflects the overshoot and collapse mode due to resource scarcity. However, the peaks of certain variables are raised and partially shifted into
+the future.
+98 NEBEL ET AL .
+ACKNOWLEDGMENTS
+The authors gratefully acknowledge the funding of this project by computing time provided by the Paderborn Center for Parallel Computing (PC2).
+Further thanks go to Prof. Sandra Hamella of the University of Applied Sciences Regensburg for providing the LtG CD from 2005. The authors
+express gratitude to the anonymous reviewers for their helpful suggestions and supportive comments, which significantly helped to improve
+the paper.
+Open access funding enabled and organized by Projekt DEAL.
+CONFLICT OF INTEREST STATEMENT
+The authors declare no conflict of interest.
+DATA AVAILABILITY STATEMENT
+The data that supports the findings of this study are available in the supporting information of this article.
+ORCID
+Arjuna Nebel https://orcid.org/0000-0002-5340-3001
+REFERENCES
+Bardi, U. (2011). The limits to growth revisited. Springer.
+bp. (2022). Statistical review of world energy. T echnical Report 71, bp. https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/
+energy-economics/statistical-review/bp-stats-review-2022-full-report.pdf
+Castro, R. (2012). Arguments on the imminence of global collapse are premature when based on simulation models. GAIA - Ecological Perspectives for Science
+and Society, 21, 271–273.
+de Jongh, D. (1978). Structural parameter sensitivity of the ‘limits to growth’ world model.Applied Mathematical Modelling, 2(2), 77–80.
+FAO. (2023). Food supply. License: CC BY-NC-SA 3.0 IGO,https://www.fao.org/faostat/en/#data/FBS
+Forrester, J. W. (1971). Counterintuitive behavior of social systems.T echnological Forecasting and Social Change, 3, 1–22.
+Heinberg, R., & Miller, A. (2023). Welcome to the great unraveling: Navigating the polycrisis of environmental and social breakdown. Post Carbon Institute.
+Herrington, G. (2021). Update to limits to growth: Comparing the world3 model with empirical data.Journal of Industrial Ecology, 25(3), 614–626.
+Herrington, G. (2022). Five insights for avoiding global collapse.M D P I .
+Human Development Reports. (2022a). Expected years of schooling. https://hdr.undp.org/data-center/human-development-index#/indicies/HDI
+Human Development Reports. (2022b). Human development index. https://hdr.undp.org/data-center/human-development-index#/indicies/HDI
+IPCC. (2022). Climate change 2022: Impacts, adaptation and vulnerability. Summary for policymakers. Cambridge University Press.
+Irwin, T. (2015). Transition design: A proposal for a new area of design practice, study, and research.Design and Culture, 7(2), 229–246.
+Jackson, T., & Webster, R. (2016). Limits revisited-a review of the limits to growth debate. A report to the all-party parliamentary group on limits to growth.
+https://limits2growth.org.uk/wp-content/uploads/Jackson-and-Webster-2016-Limits-Revisited.pdf
+Jacques, P ., Dunlap, R., & Freeman, M. (2008). The organisation of denial: Conservative think tanks and environmental scepticism. Environmental Politics, 17,
+349–385.
+Lan, X., T ans, P ., & Thoning, K. W. (2023). Trends in globally-averaged CO2 determined from NOAA global monitoring laboratory measurements.Version 2023-
+02 NOAA/GML. https://gml.noaa.gov/ccgg/trends/
+Meadows, D. H., Meadows, D. L., Jørgen., William, R., & Ill, W. B. (1972).Limits to growth. Universe Books.
+Meadows, D. H., Randers, J., Meadows, D. L., & Meadows, D. H. (2005).Limits to growth : The 30-year update. Earthscan.
+Meadows, D. L., Behrens, W. W., Meadows, D. H., Naill, R. F., Randers, J., & Zahn, E. K. O. (1974).Dynamics of growth in a finite world. Wright-Allen Press Inc.
+Nordhaus, W. (1973). World dynamics: Measurement without data.The Economic Journal, 83, 1156–1183.
+Norgard, J., Peet, J., & Ragnarsdottir, K. (2010). The history of limits to growth.Solutions, 1, 59–63.
+Our World in Data. (2022). Global fossil fuel consumption. Data from Smil and BP via Our World in Data. https://ourworldindata.org/fossil-fuels#global-
+fossil-fuel-consumption
+Persson, L., Almroth, B. M. C., Collins, C. D., Cornell, S., de Wit, C. A., Diamond, M. L., Fantke, P ., Hassellöv, M., MacLeod, M., Ryberg, M. W., Joergen sen, P . S.,
+Villarrubia-Gómez, P ., Wang, Z., & Hauschild, M. Z. (2022). Outside the safe operating space of the planetary boundary for novel entities. Environmental
+Science & T echnology, 56(3), 1510–1521. PMID: 35038861.
+Rockström, J., Steffen, W., Noone, K., Persson, A., Chapin III, F. S., Lambin, E., Lenton, T., Scheffer, M., Folke, C., Schellnhuber, H., Nykvist, B.,de Wit, C., Hughes,
+T., Van der Leeuw, S., Rodhe, H., Sörlin, S., Snyder, P ., Costanza, R., Svedin, U., & Foley, J. (2009). Planetary boundaries: Exploring the safe operating space
+for humanity. Ecology and Society, 14(2), 32.
+Rubin, O., & Lomborg, B. (2003). Dustbin of history - Limits to growth.Foreign Policy, 133, 42–44.
+Sandrine Dixson-Decleve, O. G., Ghosh, J., Rockström, J., & Per Espen Stoknes, J. R. (2022).Earth for all - A survival guide for Hhumanity. New Society Publishers.
+The World Bank. (2023a). Death rate, crude (per 1,000 people). Data retrieved from World Development Indicators.https://datatopics.worldbank.org/world-
+development-indicators/themes/people.html
+The World Bank. (2023b). Population, total. Data retrieved from World Development Indicators. https://datatopics.worldbank.org/world-development-
+indicators/themes/people.html
+Turner, G. M. (2008). A comparison of the limits to growth with 30 years of reality.Global Environmental Change, 18(3), 397–411.
+Turner, G. M. (2012). The limits to growth revisited.GAIA - Ecological Perspectives for Science and Society, 21(2), 116–124.
+Turner, G. M. (2013). The limits to growth model is more than a mathematical exercise; reaction to R. Castro. 2012. Arguments on the imminence of global
+collapse are premature when based on simulation models. GAIA 21/4: 271–273. GAIA, 22, 18–19.
+NEBEL ET AL . 99
+United Nations Industrial Development Organization. (2023a). Index number of industrial production . https://stat.unido.org/database/INDSTAT%202%
+202022,%20ISIC%20Revision%203
+United Nations Industrial Development Organization. (2023b).Monthly Index of Industrial Production (IIP) at the 2-digit level of ISIC Revision 4. https://stat.unido.
+org/content/dataset_description/monthly-iip
+United Nations Industrial Development Organization. (2023c). Value added . https://stat.unido.org/database/INDSTAT%202%202022,%20ISIC%
+20Revision%203
+Vaclav Smil. (2016). Energy transitions: Global and national perspectives (2nd ed., Appendix A). Praeger.
+Vanwynsberghe, C. (2021). PyWorld3 - The World3 model revisited in Python. https://hal.archives-ouvertes.fr/hal-03414394
+Vermeulen, P ., & de Jongh, D. (1976). Parameter sensitivity of the ‘limits to growth’ world model.Applied Mathematical Modelling, 1(1), 29–32.
+Wamsler, C., & Brink, E. (2018). Mindsets for sustainability: Exploring the link between mindfulness and sustainable climate adaptation. Ecological Economics,
+151, 55–61.
+York University Ecological Footprint Initiative & Global Footprint Network. (2022).National footprint and biocapacity accounts. https://data.footprintnetwork.
+org
+SUPPORTING INFORMATION
+Additional supporting information can be found online in the Supporting Information section at the end of this article.
+How to cite this article: Nebel, A., Kling, A., Willamowski, R., & Schell, T. (2024). Recalibration of limits to growth: An update of the World3
+model. Journal of Industrial Ecology, 28, 87–99. https://doi.org/10.1111/jiec.13442

@@ -1,0 +1,82 @@
+Calibrating 12 params on TRAIN (1970, 2014); test window 2015-latest is held out.
+x0 objective (Recal23, lfpf clipped): 0.0745
+  gen   1  best train NRMSD=0.0745  conv=0.000  t=139s
+  gen   2  best train NRMSD=0.0744  conv=0.000  t=144s
+  gen   3  best train NRMSD=0.0744  conv=0.000  t=150s
+  gen   4  best train NRMSD=0.0744  conv=0.000  t=156s
+  gen   5  best train NRMSD=0.0730  conv=0.000  t=161s
+  gen   6  best train NRMSD=0.0730  conv=0.000  t=167s
+  gen   7  best train NRMSD=0.0644  conv=0.000  t=173s
+  gen   8  best train NRMSD=0.0644  conv=0.000  t=179s
+  gen   9  best train NRMSD=0.0617  conv=0.000  t=186s
+  gen  10  best train NRMSD=0.0617  conv=0.000  t=191s
+  gen  11  best train NRMSD=0.0617  conv=0.000  t=197s
+  gen  12  best train NRMSD=0.0583  conv=0.000  t=203s
+  gen  13  best train NRMSD=0.0583  conv=0.000  t=209s
+  gen  14  best train NRMSD=0.0583  conv=0.000  t=215s
+  gen  15  best train NRMSD=0.0583  conv=0.000  t=221s
+  gen  16  best train NRMSD=0.0583  conv=0.001  t=227s
+  gen  17  best train NRMSD=0.0574  conv=0.001  t=233s
+  gen  18  best train NRMSD=0.0574  conv=0.001  t=239s
+  gen  19  best train NRMSD=0.0574  conv=0.001  t=245s
+  gen  20  best train NRMSD=0.0574  conv=0.001  t=250s
+  gen  21  best train NRMSD=0.0574  conv=0.001  t=256s
+  gen  22  best train NRMSD=0.0563  conv=0.001  t=262s
+  gen  23  best train NRMSD=0.0563  conv=0.001  t=267s
+  gen  24  best train NRMSD=0.0563  conv=0.001  t=273s
+  gen  25  best train NRMSD=0.0563  conv=0.001  t=278s
+  gen  26  best train NRMSD=0.0563  conv=0.001  t=284s
+  gen  27  best train NRMSD=0.0563  conv=0.001  t=290s
+  gen  28  best train NRMSD=0.0563  conv=0.001  t=296s
+  gen  29  best train NRMSD=0.0563  conv=0.001  t=302s
+  gen  30  best train NRMSD=0.0554  conv=0.001  t=309s
+  gen  31  best train NRMSD=0.0554  conv=0.001  t=314s
+  gen  32  best train NRMSD=0.0553  conv=0.001  t=320s
+  gen  33  best train NRMSD=0.0548  conv=0.001  t=326s
+  gen  34  best train NRMSD=0.0540  conv=0.001  t=331s
+  gen  35  best train NRMSD=0.0540  conv=0.001  t=337s
+  gen  36  best train NRMSD=0.0540  conv=0.001  t=343s
+  gen  37  best train NRMSD=0.0540  conv=0.001  t=349s
+  gen  38  best train NRMSD=0.0540  conv=0.001  t=354s
+  gen  39  best train NRMSD=0.0540  conv=0.001  t=360s
+  gen  40  best train NRMSD=0.0540  conv=0.002  t=366s
+  gen  41  best train NRMSD=0.0522  conv=0.002  t=372s
+  gen  42  best train NRMSD=0.0522  conv=0.002  t=378s
+  gen  43  best train NRMSD=0.0522  conv=0.002  t=384s
+  gen  44  best train NRMSD=0.0522  conv=0.001  t=391s
+  gen  45  best train NRMSD=0.0522  conv=0.002  t=396s
+  gen  46  best train NRMSD=0.0522  conv=0.002  t=402s
+  gen  47  best train NRMSD=0.0522  conv=0.002  t=408s
+  gen  48  best train NRMSD=0.0522  conv=0.002  t=414s
+  gen  49  best train NRMSD=0.0522  conv=0.002  t=420s
+  gen  50  best train NRMSD=0.0522  conv=0.002  t=426s
+  gen  51  best train NRMSD=0.0522  conv=0.002  t=433s
+  gen  52  best train NRMSD=0.0522  conv=0.002  t=439s
+  gen  53  best train NRMSD=0.0521  conv=0.002  t=445s
+  gen  54  best train NRMSD=0.0521  conv=0.002  t=451s
+  gen  55  best train NRMSD=0.0521  conv=0.002  t=457s
+  gen  56  best train NRMSD=0.0521  conv=0.002  t=462s
+  gen  57  best train NRMSD=0.0513  conv=0.002  t=469s
+  gen  58  best train NRMSD=0.0513  conv=0.002  t=474s
+  gen  59  best train NRMSD=0.0509  conv=0.003  t=480s
+  gen  60  best train NRMSD=0.0509  conv=0.003  t=486s
+
+Done in 486s, nfev=5856.
+scenario                          train     test
+BAU_World3-03_default            0.0841   0.1510
+Recalibration23_Nebel2023        0.0745   0.1876
+Calibrated_2026                  0.0509   0.0838
+
+Calibrated params:
+  alic   default=14         recal23=15.24      -> 11.43
+  alsc   default=20         recal23=nan        -> 27.73
+  icor   default=3          recal23=nan        -> 2.707
+  pptd   default=20         recal23=116.4      -> 142.9
+  imef   default=0.1        recal23=0.1102     -> 0.07281
+  nri    default=1e+12      recal23=1.302e+12  -> 2.582e+12
+  uildt  default=10         recal23=0.533      -> 11.77
+  hsid   default=20         recal23=38.24      -> 11.35
+  lpd    default=20         recal23=33.84      -> 37.7
+  mtfn   default=12         recal23=9.454      -> 8.577
+  dcfsn  default=3.8        recal23=nan        -> 4.08
+  lfpf   default=0.75       recal23=1.022      -> 0.7416

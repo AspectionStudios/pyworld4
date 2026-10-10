@@ -1,0 +1,177 @@
+Calibrating 14 params on TRAIN (1970, 2014); test window 2015-latest is held out.
+x0 objective (warm start from v1): 0.0856
+  gen   1  best train NRMSD=0.0856  conv=0.000  t=17s
+  gen   2  best train NRMSD=0.0856  conv=0.000  t=23s
+  gen   3  best train NRMSD=0.0856  conv=0.000  t=30s
+  gen   4  best train NRMSD=0.0856  conv=0.000  t=36s
+  gen   5  best train NRMSD=0.0856  conv=0.000  t=43s
+  gen   6  best train NRMSD=0.0856  conv=0.000  t=49s
+  gen   7  best train NRMSD=0.0856  conv=0.000  t=55s
+  gen   8  best train NRMSD=0.0856  conv=0.000  t=62s
+  gen   9  best train NRMSD=0.0856  conv=0.000  t=68s
+  gen  10  best train NRMSD=0.0856  conv=0.000  t=74s
+  gen  11  best train NRMSD=0.0856  conv=0.000  t=81s
+  gen  12  best train NRMSD=0.0856  conv=0.000  t=88s
+  gen  13  best train NRMSD=0.0856  conv=0.000  t=94s
+  gen  14  best train NRMSD=0.0856  conv=0.000  t=100s
+  gen  15  best train NRMSD=0.0856  conv=0.000  t=106s
+  gen  16  best train NRMSD=0.0856  conv=0.000  t=113s
+  gen  17  best train NRMSD=0.0856  conv=0.000  t=119s
+  gen  18  best train NRMSD=0.0856  conv=0.000  t=125s
+  gen  19  best train NRMSD=0.0856  conv=0.000  t=131s
+  gen  20  best train NRMSD=0.0856  conv=0.000  t=137s
+  gen  21  best train NRMSD=0.0856  conv=0.000  t=143s
+  gen  22  best train NRMSD=0.0856  conv=0.000  t=149s
+  gen  23  best train NRMSD=0.0856  conv=0.000  t=155s
+  gen  24  best train NRMSD=0.0856  conv=0.000  t=161s
+  gen  25  best train NRMSD=0.0856  conv=0.000  t=167s
+  gen  26  best train NRMSD=0.0856  conv=0.000  t=173s
+  gen  27  best train NRMSD=0.0844  conv=0.000  t=179s
+  gen  28  best train NRMSD=0.0844  conv=0.000  t=184s
+  gen  29  best train NRMSD=0.0844  conv=0.000  t=190s
+  gen  30  best train NRMSD=0.0844  conv=0.000  t=197s
+  gen  31  best train NRMSD=0.0844  conv=0.000  t=203s
+  gen  32  best train NRMSD=0.0844  conv=0.000  t=208s
+  gen  33  best train NRMSD=0.0844  conv=0.000  t=214s
+  gen  34  best train NRMSD=0.0844  conv=0.000  t=220s
+  gen  35  best train NRMSD=0.0844  conv=0.000  t=226s
+  gen  36  best train NRMSD=0.0844  conv=0.000  t=233s
+  gen  37  best train NRMSD=0.0844  conv=0.000  t=238s
+  gen  38  best train NRMSD=0.0844  conv=0.000  t=245s
+  gen  39  best train NRMSD=0.0844  conv=0.000  t=251s
+  gen  40  best train NRMSD=0.0844  conv=0.000  t=257s
+  gen  41  best train NRMSD=0.0844  conv=0.000  t=264s
+  gen  42  best train NRMSD=0.0844  conv=0.000  t=271s
+  gen  43  best train NRMSD=0.0844  conv=0.000  t=278s
+  gen  44  best train NRMSD=0.0844  conv=0.000  t=284s
+  gen  45  best train NRMSD=0.0844  conv=0.000  t=291s
+  gen  46  best train NRMSD=0.0844  conv=0.000  t=298s
+  gen  47  best train NRMSD=0.0844  conv=0.000  t=304s
+  gen  48  best train NRMSD=0.0844  conv=0.000  t=311s
+  gen  49  best train NRMSD=0.0844  conv=0.000  t=317s
+  gen  50  best train NRMSD=0.0844  conv=0.000  t=324s
+  gen  51  best train NRMSD=0.0842  conv=0.000  t=330s
+  gen  52  best train NRMSD=0.0831  conv=0.000  t=337s
+  gen  53  best train NRMSD=0.0831  conv=0.000  t=343s
+  gen  54  best train NRMSD=0.0831  conv=0.000  t=351s
+  gen  55  best train NRMSD=0.0831  conv=0.000  t=357s
+  gen  56  best train NRMSD=0.0831  conv=0.000  t=364s
+  gen  57  best train NRMSD=0.0831  conv=0.000  t=371s
+  gen  58  best train NRMSD=0.0831  conv=0.000  t=377s
+  gen  59  best train NRMSD=0.0831  conv=0.000  t=384s
+  gen  60  best train NRMSD=0.0831  conv=0.000  t=390s
+  gen  61  best train NRMSD=0.0831  conv=0.000  t=397s
+  gen  62  best train NRMSD=0.0831  conv=0.000  t=403s
+  gen  63  best train NRMSD=0.0831  conv=0.000  t=410s
+  gen  64  best train NRMSD=0.0820  conv=0.000  t=417s
+  gen  65  best train NRMSD=0.0820  conv=0.000  t=423s
+  gen  66  best train NRMSD=0.0820  conv=0.000  t=430s
+  gen  67  best train NRMSD=0.0820  conv=0.000  t=436s
+  gen  68  best train NRMSD=0.0820  conv=0.000  t=443s
+  gen  69  best train NRMSD=0.0820  conv=0.000  t=450s
+  gen  70  best train NRMSD=0.0814  conv=0.000  t=456s
+  gen  71  best train NRMSD=0.0810  conv=0.000  t=463s
+  gen  72  best train NRMSD=0.0810  conv=0.000  t=470s
+  gen  73  best train NRMSD=0.0810  conv=0.000  t=477s
+  gen  74  best train NRMSD=0.0810  conv=0.000  t=483s
+  gen  75  best train NRMSD=0.0810  conv=0.000  t=490s
+  gen  76  best train NRMSD=0.0810  conv=0.000  t=496s
+  gen  77  best train NRMSD=0.0810  conv=0.000  t=503s
+  gen  78  best train NRMSD=0.0810  conv=0.000  t=510s
+  gen  79  best train NRMSD=0.0810  conv=0.000  t=516s
+  gen  80  best train NRMSD=0.0810  conv=0.000  t=523s
+  gen  81  best train NRMSD=0.0810  conv=0.000  t=529s
+  gen  82  best train NRMSD=0.0810  conv=0.000  t=536s
+  gen  83  best train NRMSD=0.0809  conv=0.000  t=543s
+  gen  84  best train NRMSD=0.0809  conv=0.000  t=550s
+  gen  85  best train NRMSD=0.0809  conv=0.000  t=557s
+  gen  86  best train NRMSD=0.0809  conv=0.000  t=563s
+  gen  87  best train NRMSD=0.0809  conv=0.000  t=570s
+  gen  88  best train NRMSD=0.0809  conv=0.000  t=578s
+  gen  89  best train NRMSD=0.0809  conv=0.000  t=584s
+  gen  90  best train NRMSD=0.0809  conv=0.000  t=592s
+  gen  91  best train NRMSD=0.0809  conv=0.000  t=599s
+  gen  92  best train NRMSD=0.0809  conv=0.000  t=605s
+  gen  93  best train NRMSD=0.0809  conv=0.000  t=612s
+  gen  94  best train NRMSD=0.0809  conv=0.000  t=618s
+  gen  95  best train NRMSD=0.0809  conv=0.000  t=625s
+  gen  96  best train NRMSD=0.0809  conv=0.000  t=631s
+  gen  97  best train NRMSD=0.0809  conv=0.000  t=638s
+  gen  98  best train NRMSD=0.0809  conv=0.000  t=644s
+  gen  99  best train NRMSD=0.0809  conv=0.000  t=651s
+  gen 100  best train NRMSD=0.0809  conv=0.000  t=658s
+  gen 101  best train NRMSD=0.0809  conv=0.000  t=664s
+  gen 102  best train NRMSD=0.0805  conv=0.000  t=671s
+  gen 103  best train NRMSD=0.0796  conv=0.000  t=677s
+  gen 104  best train NRMSD=0.0793  conv=0.000  t=684s
+  gen 105  best train NRMSD=0.0793  conv=0.000  t=691s
+  gen 106  best train NRMSD=0.0793  conv=0.000  t=697s
+  gen 107  best train NRMSD=0.0793  conv=0.000  t=704s
+  gen 108  best train NRMSD=0.0793  conv=0.000  t=710s
+  gen 109  best train NRMSD=0.0793  conv=0.000  t=718s
+  gen 110  best train NRMSD=0.0793  conv=0.000  t=725s
+  gen 111  best train NRMSD=0.0793  conv=0.000  t=732s
+  gen 112  best train NRMSD=0.0793  conv=0.000  t=738s
+  gen 113  best train NRMSD=0.0793  conv=0.000  t=745s
+  gen 114  best train NRMSD=0.0793  conv=0.000  t=751s
+  gen 115  best train NRMSD=0.0793  conv=0.000  t=758s
+  gen 116  best train NRMSD=0.0793  conv=0.000  t=764s
+  gen 117  best train NRMSD=0.0793  conv=0.000  t=771s
+  gen 118  best train NRMSD=0.0793  conv=0.000  t=777s
+  gen 119  best train NRMSD=0.0793  conv=0.000  t=783s
+  gen 120  best train NRMSD=0.0793  conv=0.000  t=790s
+  gen 121  best train NRMSD=0.0789  conv=0.000  t=797s
+  gen 122  best train NRMSD=0.0789  conv=0.000  t=803s
+  gen 123  best train NRMSD=0.0789  conv=0.000  t=809s
+  gen 124  best train NRMSD=0.0789  conv=0.000  t=816s
+  gen 125  best train NRMSD=0.0789  conv=0.000  t=822s
+  gen 126  best train NRMSD=0.0789  conv=0.000  t=828s
+  gen 127  best train NRMSD=0.0787  conv=0.000  t=835s
+  gen 128  best train NRMSD=0.0787  conv=0.000  t=841s
+  gen 129  best train NRMSD=0.0787  conv=0.000  t=849s
+  gen 130  best train NRMSD=0.0787  conv=0.000  t=856s
+  gen 131  best train NRMSD=0.0787  conv=0.000  t=862s
+  gen 132  best train NRMSD=0.0787  conv=0.000  t=868s
+  gen 133  best train NRMSD=0.0787  conv=0.000  t=874s
+  gen 134  best train NRMSD=0.0787  conv=0.000  t=880s
+  gen 135  best train NRMSD=0.0787  conv=0.000  t=886s
+  gen 136  best train NRMSD=0.0787  conv=0.001  t=893s
+  gen 137  best train NRMSD=0.0787  conv=0.001  t=899s
+  gen 138  best train NRMSD=0.0787  conv=0.001  t=905s
+  gen 139  best train NRMSD=0.0787  conv=0.001  t=911s
+  gen 140  best train NRMSD=0.0787  conv=0.001  t=917s
+  gen 141  best train NRMSD=0.0787  conv=0.001  t=923s
+  gen 142  best train NRMSD=0.0787  conv=0.001  t=930s
+  gen 143  best train NRMSD=0.0787  conv=0.001  t=936s
+  gen 144  best train NRMSD=0.0787  conv=0.001  t=942s
+  gen 145  best train NRMSD=0.0787  conv=0.001  t=948s
+  gen 146  best train NRMSD=0.0786  conv=0.001  t=955s
+  gen 147  best train NRMSD=0.0786  conv=0.001  t=961s
+  gen 148  best train NRMSD=0.0784  conv=0.001  t=967s
+  gen 149  best train NRMSD=0.0784  conv=0.001  t=975s
+  gen 150  best train NRMSD=0.0784  conv=0.001  t=981s
+
+Done in 981s, nfev=16912.
+scenario                          train     test
+BAU_World3-03_default            0.1089   0.1632
+Recalibration23_Nebel2023        0.1092   0.2032
+Calibrated_v1                    0.0856   0.1030
+Calibrated_2026                  0.0784   0.1010
+Calibrated_2026+restart2014      0.0775   0.0713
+BAU+restart2014                  0.1079   0.1234
+
+Calibrated params:
+  alic   default=14         recal23=15.24      -> 13.99
+  alsc   default=20         recal23=nan        -> 28.09
+  icor   default=3          recal23=nan        -> 3.026
+  pptd   default=20         recal23=116.4      -> 149.5
+  imef   default=0.1        recal23=0.1102     -> 0.05845
+  nri    default=1e+12      recal23=1.302e+12  -> 2.511e+12
+  uildt  default=10         recal23=0.533      -> 10.37
+  hsid   default=20         recal23=38.24      -> 13.88
+  lpd    default=20         recal23=33.84      -> 28.04
+  mtfn   default=12         recal23=9.454      -> 9.741
+  dcfsn  default=3.8        recal23=nan        -> 4.781
+  lfpf   default=0.75       recal23=1.022      -> 0.7136
+  len    default=28         recal23=nan        -> 23.53
+  sad    default=20         recal23=13.38      -> 10.48

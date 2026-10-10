@@ -1,0 +1,74 @@
+refs (v2 base): OS=0.02393 R=0.1146 C=0.0784  J(v2)=2.5000
+  gen   1  J=2.1256  conv=0.000  t=28s
+  gen   2  J=2.1256  conv=0.000  t=41s
+  gen   3  J=1.7829  conv=0.000  t=54s
+  gen   4  J=1.7829  conv=0.000  t=67s
+  gen   5  J=1.7829  conv=0.000  t=81s
+  gen   6  J=1.7829  conv=0.000  t=94s
+  gen   7  J=1.7829  conv=0.000  t=106s
+  gen   8  J=1.7829  conv=0.000  t=119s
+  gen   9  J=1.7829  conv=0.000  t=132s
+  gen  10  J=1.6330  conv=0.000  t=145s
+  gen  11  J=1.6330  conv=0.000  t=158s
+  gen  12  J=1.6330  conv=0.000  t=171s
+  gen  13  J=1.4790  conv=0.000  t=184s
+  gen  14  J=1.4180  conv=0.000  t=197s
+  gen  15  J=1.4180  conv=0.000  t=209s
+  gen  16  J=1.4180  conv=0.000  t=222s
+  gen  17  J=1.4180  conv=0.000  t=235s
+  gen  18  J=1.4180  conv=0.000  t=248s
+  gen  19  J=1.4180  conv=0.000  t=261s
+  gen  20  J=1.4180  conv=0.000  t=274s
+  gen  21  J=1.4180  conv=0.000  t=287s
+  gen  22  J=1.4180  conv=0.000  t=300s
+  gen  23  J=1.4180  conv=0.000  t=313s
+  gen  24  J=1.4180  conv=0.000  t=326s
+  gen  25  J=1.4180  conv=0.000  t=338s
+  gen  26  J=1.4180  conv=0.000  t=351s
+  gen  27  J=1.4180  conv=0.000  t=364s
+  gen  28  J=1.2430  conv=0.000  t=377s
+  gen  29  J=1.2430  conv=0.000  t=389s
+  gen  30  J=1.2430  conv=0.000  t=402s
+  gen  31  J=1.2430  conv=0.000  t=415s
+  gen  32  J=1.2430  conv=0.000  t=428s
+  gen  33  J=1.2430  conv=0.000  t=441s
+  gen  34  J=1.2430  conv=0.000  t=453s
+  gen  35  J=1.2430  conv=0.000  t=466s
+  gen  36  J=1.2430  conv=0.000  t=479s
+  gen  37  J=1.2430  conv=0.000  t=492s
+  gen  38  J=1.2430  conv=0.000  t=505s
+  gen  39  J=1.2430  conv=0.000  t=517s
+  gen  40  J=1.2430  conv=0.000  t=531s
+  gen  41  J=1.2430  conv=0.000  t=543s
+  gen  42  J=1.2430  conv=0.000  t=557s
+  gen  43  J=1.2430  conv=0.000  t=570s
+  gen  44  J=1.2430  conv=0.000  t=583s
+  gen  45  J=1.2430  conv=0.000  t=596s
+  gen  46  J=1.2326  conv=0.000  t=608s
+  gen  47  J=1.1820  conv=0.000  t=621s
+  gen  48  J=1.1791  conv=0.000  t=634s
+  gen  49  J=1.1791  conv=0.000  t=647s
+  gen  50  J=1.1791  conv=0.000  t=659s
+  gen  51  J=1.1791  conv=0.000  t=672s
+  gen  52  J=1.1791  conv=0.000  t=685s
+  gen  53  J=1.1791  conv=0.000  t=697s
+  gen  54  J=1.1791  conv=0.000  t=710s
+  gen  55  J=1.1791  conv=0.000  t=723s
+  gen  56  J=1.1791  conv=0.000  t=736s
+  gen  57  J=1.1791  conv=0.000  t=749s
+  gen  58  J=1.1791  conv=0.000  t=761s
+  gen  59  J=1.1791  conv=0.000  t=774s
+  gen  60  J=1.1791  conv=0.000  t=787s
+DE done: J=1.1791 nfev=6344 t=787s; Powell (300)...
+Powell: J=1.1387 t=906s
+
+HELD-OUT (2015-2023, never used in tuning)
+population forecast, mean |err| % (signed) by years ahead, 20-yr data spin-up:
+  BAU  h1=0.038(+0.032)  h2=0.048(+0.048)  h3=0.046(+0.046)  h4=0.033(+0.025)  h5=0.023(-0.008)
+  v2   h1=0.252(+0.252)  h2=0.473(+0.473)  h3=0.667(+0.667)  h4=0.836(+0.836)  h5=0.993(+0.993)
+  v4   h1=0.155(-0.155)  h2=0.309(-0.309)  h3=0.468(-0.468)  h4=0.632(-0.632)  h5=0.794(-0.794)
+  BAU  rates NRMSD {'cbr': 0.0369, 'cdr': 0.1359, 'le': 0.0242}  curve test 0.1632  2026 pop 8.2552B (-0.55% vs UN proj)  p4 +6.0%  LE 2023->2030 70.0->61.9
+  v2   rates NRMSD {'cbr': 0.1259, 'cdr': 0.0859, 'le': 0.0185}  curve test 0.1010  2026 pop 8.3620B (+0.74% vs UN proj)  p4 +6.5%  LE 2023->2030 71.0->69.4
+  v4   rates NRMSD {'cbr': 0.05, 'cdr': 0.2246, 'le': 0.0188}  curve test 0.1033  2026 pop 8.2719B (-0.35% vs UN proj)  p4 +0.3%  LE 2023->2030 71.0->70.2
+
+v4 x: {'m1_a': -0.5694, 'm2_a': -0.4943, 'm3_a': 0.388, 'm4_a': 0.3798, 'm1_b': -0.1217, 'm2_b': 0.0975, 'm3_b': 0.0098, 'm4_b': -0.0604, 'sfsn_a': -0.0545, 'sfsn_b': 0.3575, 'fce_a': 0.8795, 'dcfsn': 4.4459, 'mtfn': 8.826}

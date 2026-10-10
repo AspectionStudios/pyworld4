@@ -1,0 +1,86 @@
+C_ref (v2 curve) = 0.0784   F_ref (v2 forecast) = 0.02437   J(v2) = 2.0000
+  gen   1  J=2.0000  conv=0.000  t=66s
+  gen   2  J=2.0000  conv=0.000  t=92s
+  gen   3  J=1.8099  conv=0.000  t=118s
+  gen   4  J=1.8099  conv=0.000  t=144s
+  gen   5  J=1.8099  conv=0.000  t=170s
+  gen   6  J=1.8099  conv=0.000  t=195s
+  gen   7  J=1.8099  conv=0.000  t=221s
+  gen   8  J=1.8099  conv=0.000  t=247s
+  gen   9  J=1.8099  conv=0.000  t=273s
+  gen  10  J=1.8099  conv=0.000  t=299s
+  gen  11  J=1.8099  conv=0.000  t=325s
+  gen  12  J=1.8099  conv=0.000  t=351s
+  gen  13  J=1.8099  conv=0.000  t=379s
+  gen  14  J=1.8099  conv=0.000  t=405s
+  gen  15  J=1.7706  conv=0.000  t=432s
+  gen  16  J=1.7706  conv=0.000  t=456s
+  gen  17  J=1.7706  conv=0.000  t=482s
+  gen  18  J=1.7706  conv=0.000  t=506s
+  gen  19  J=1.7674  conv=0.000  t=529s
+  gen  20  J=1.7674  conv=0.000  t=553s
+  gen  21  J=1.7566  conv=0.000  t=576s
+  gen  22  J=1.7566  conv=0.000  t=600s
+  gen  23  J=1.7566  conv=0.000  t=623s
+  gen  24  J=1.7566  conv=0.000  t=646s
+  gen  25  J=1.7566  conv=0.000  t=669s
+  gen  26  J=1.7566  conv=0.000  t=693s
+  gen  27  J=1.7566  conv=0.000  t=716s
+  gen  28  J=1.7560  conv=0.000  t=739s
+  gen  29  J=1.7560  conv=0.000  t=763s
+  gen  30  J=1.7560  conv=0.000  t=786s
+  gen  31  J=1.7335  conv=0.000  t=809s
+  gen  32  J=1.7335  conv=0.000  t=832s
+  gen  33  J=1.7194  conv=0.000  t=855s
+  gen  34  J=1.7194  conv=0.000  t=879s
+  gen  35  J=1.7194  conv=0.000  t=902s
+  gen  36  J=1.7194  conv=0.000  t=926s
+  gen  37  J=1.7194  conv=0.000  t=949s
+  gen  38  J=1.7156  conv=0.000  t=972s
+  gen  39  J=1.7156  conv=0.000  t=996s
+  gen  40  J=1.7156  conv=0.000  t=1019s
+  gen  41  J=1.6788  conv=0.000  t=1042s
+  gen  42  J=1.6788  conv=0.000  t=1066s
+  gen  43  J=1.6788  conv=0.000  t=1089s
+  gen  44  J=1.6788  conv=0.000  t=1113s
+  gen  45  J=1.6788  conv=0.000  t=1137s
+  gen  46  J=1.6788  conv=0.000  t=1161s
+  gen  47  J=1.6788  conv=0.000  t=1185s
+  gen  48  J=1.6744  conv=0.000  t=1208s
+  gen  49  J=1.6744  conv=0.000  t=1232s
+  gen  50  J=1.6744  conv=0.000  t=1256s
+  gen  51  J=1.6744  conv=0.000  t=1279s
+  gen  52  J=1.6744  conv=0.000  t=1302s
+  gen  53  J=1.6744  conv=0.000  t=1325s
+  gen  54  J=1.6744  conv=0.000  t=1349s
+  gen  55  J=1.6744  conv=0.000  t=1373s
+  gen  56  J=1.6736  conv=0.000  t=1397s
+  gen  57  J=1.6736  conv=0.000  t=1420s
+  gen  58  J=1.6736  conv=0.000  t=1443s
+  gen  59  J=1.6736  conv=0.000  t=1467s
+  gen  60  J=1.6736  conv=0.000  t=1491s
+  gen  61  J=1.6736  conv=0.000  t=1515s
+  gen  62  J=1.6736  conv=0.000  t=1538s
+  gen  63  J=1.6736  conv=0.000  t=1561s
+  gen  64  J=1.6736  conv=0.000  t=1585s
+  gen  65  J=1.6736  conv=0.000  t=1608s
+  gen  66  J=1.6736  conv=0.000  t=1632s
+  gen  67  J=1.6736  conv=0.000  t=1656s
+  gen  68  J=1.6736  conv=0.000  t=1679s
+  gen  69  J=1.6736  conv=0.000  t=1702s
+  gen  70  J=1.6736  conv=0.000  t=1726s
+DE done: J=1.6736 nfev=7952 t=1726s; Powell fine-search (300 evals)...
+Powell: J=1.6629 (kept Powell) t=1949s
+
+Fair check: mean |population error| (%) by forecast horizon, origins 2014..2022
+  h        BAU         v2         v3
+  1      0.089      0.204      0.305
+  2      0.147      0.401      0.544
+  3      0.198      0.584      0.748
+  4      0.254      0.753      0.927
+  5      0.312      0.915      1.086
+
+whole-curve test NRMSD (no restart): {'BAU': 0.1632, 'v2': 0.101, 'v3': 0.1268}
+2026 population (restart 2023): 8.2013 B
+
+v3 params: {'alic': 19.8771, 'alsc': 19.6832, 'icor': 3.407, 'pptd': 192.1174, 'imef': 0.0201, 'nri': 2121478181262.038, 'uildt': 14.9999, 'hsid': 20.7244, 'lpd': 10.0001, 'mtfn': 10.9585, 'dcfsn': 4.9031, 'lfpf': 0.6521, 'len': 22.0364, 'sad': 19.4727}

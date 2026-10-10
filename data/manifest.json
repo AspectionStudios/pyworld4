@@ -1,0 +1,183 @@
+{
+  "population": {
+    "source_url": "https://ourworldindata.org/grapher/population.csv?v=1&csvType=full&useColumnShortNames=false",
+    "world3_variable": "pop",
+    "description": "Total population (UN WPP)",
+    "columns": [
+      "Year",
+      "Population"
+    ],
+    "year_min": -10000,
+    "year_max": 2023,
+    "rows": 261,
+    "fetched_utc": "2026-10-10T05:28:32Z",
+    "owid_slug": "population",
+    "entity": "World"
+  },
+  "birth_rate": {
+    "source_url": "https://ourworldindata.org/grapher/crude-birth-rate.csv?v=1&csvType=full&useColumnShortNames=false",
+    "world3_variable": "cbr",
+    "description": "Crude birth rate per 1000 (UN WPP)",
+    "columns": [
+      "Year",
+      "Birth rate"
+    ],
+    "year_min": 1950,
+    "year_max": 2023,
+    "rows": 74,
+    "fetched_utc": "2026-10-10T05:28:32Z",
+    "owid_slug": "crude-birth-rate",
+    "entity": "World"
+  },
+  "death_rate": {
+    "source_url": "https://ourworldindata.org/grapher/crude-death-rate.csv?v=1&csvType=full&useColumnShortNames=false",
+    "world3_variable": "cdr",
+    "description": "Crude death rate per 1000 (UN WPP)",
+    "columns": [
+      "Year",
+      "Annual crude death rate"
+    ],
+    "year_min": 1950,
+    "year_max": 2023,
+    "rows": 74,
+    "fetched_utc": "2026-10-10T05:28:32Z",
+    "owid_slug": "crude-death-rate",
+    "entity": "World"
+  },
+  "life_expectancy": {
+    "source_url": "https://ourworldindata.org/grapher/life-expectancy.csv?v=1&csvType=full&useColumnShortNames=false",
+    "world3_variable": "le",
+    "description": "Period life expectancy at birth (UN WPP)",
+    "columns": [
+      "Year",
+      "Life expectancy"
+    ],
+    "year_min": 1770,
+    "year_max": 2023,
+    "rows": 81,
+    "fetched_utc": "2026-10-10T05:28:32Z",
+    "owid_slug": "life-expectancy",
+    "entity": "World"
+  },
+  "food_kcal": {
+    "source_url": "https://ourworldindata.org/grapher/daily-per-capita-caloric-supply.csv?v=1&csvType=full&useColumnShortNames=false",
+    "world3_variable": "fpc",
+    "description": "Food supply kcal/capita/day (FAO)",
+    "columns": [
+      "Year",
+      "Daily calorie supply per person"
+    ],
+    "year_min": 1961,
+    "year_max": 2023,
+    "rows": 63,
+    "fetched_utc": "2026-10-10T05:28:33Z",
+    "owid_slug": "daily-per-capita-caloric-supply",
+    "entity": "World"
+  },
+  "fossil_energy": {
+    "source_url": "https://ourworldindata.org/grapher/global-fossil-fuel-consumption.csv?v=1&csvType=full&useColumnShortNames=false",
+    "world3_variable": "nrur",
+    "description": "Global fossil fuel consumption TWh (Energy Institute)",
+    "columns": [
+      "Year",
+      "Gas",
+      "Oil",
+      "Coal"
+    ],
+    "year_min": 1800,
+    "year_max": 2025,
+    "rows": 78,
+    "fetched_utc": "2026-10-10T05:28:33Z",
+    "owid_slug": "global-fossil-fuel-consumption",
+    "entity": "World"
+  },
+  "co2_ppm": {
+    "source_url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv",
+    "world3_variable": "ppolx",
+    "description": "Mauna Loa annual mean CO2, ppm (NOAA GML)",
+    "columns": [
+      "Year",
+      "CO2 ppm"
+    ],
+    "year_min": 1959,
+    "year_max": 2025,
+    "rows": 67,
+    "fetched_utc": "2026-10-10T05:28:34Z"
+  },
+  "gdp_const": {
+    "source_url": "https://api.worldbank.org/v2/country/WLD/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+    "world3_variable": "iopc/sopc",
+    "description": "World GDP, constant 2015 US$ (World Bank WDI)",
+    "columns": [
+      "Year",
+      "NY.GDP.MKTP.KD"
+    ],
+    "year_min": 1960,
+    "year_max": 2025,
+    "rows": 66,
+    "fetched_utc": "2026-10-10T05:28:34Z",
+    "wb_indicator": "NY.GDP.MKTP.KD"
+  },
+  "industry_share": {
+    "source_url": "https://api.worldbank.org/v2/country/WLD/indicator/NV.IND.TOTL.ZS?format=json&per_page=500",
+    "world3_variable": "iopc",
+    "description": "Industry incl. construction value added, % of GDP (World Bank WDI)",
+    "columns": [
+      "Year",
+      "NV.IND.TOTL.ZS"
+    ],
+    "year_min": 1991,
+    "year_max": 2025,
+    "rows": 35,
+    "fetched_utc": "2026-10-10T05:28:34Z",
+    "wb_indicator": "NV.IND.TOTL.ZS"
+  },
+  "services_share": {
+    "source_url": "https://api.worldbank.org/v2/country/WLD/indicator/NV.SRV.TOTL.ZS?format=json&per_page=500",
+    "world3_variable": "sopc",
+    "description": "Services value added, % of GDP (World Bank WDI)",
+    "columns": [
+      "Year",
+      "NV.SRV.TOTL.ZS"
+    ],
+    "year_min": 1995,
+    "year_max": 2024,
+    "rows": 30,
+    "fetched_utc": "2026-10-10T05:28:34Z",
+    "wb_indicator": "NV.SRV.TOTL.ZS"
+  },
+  "cohorts": {
+    "source_url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz",
+    "world3_variable": "p1,p2,p3,p4",
+    "description": "UN WPP2024 mid-year population by World3 cohort (0-14, 15-44, 45-64, 65+), estimates only",
+    "columns": [
+      "Year",
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "total"
+    ],
+    "year_min": 1950,
+    "year_max": 2023,
+    "rows": 74,
+    "fetched_utc": "2026-10-10T05:28:49Z"
+  },
+  "cohorts_un_projection": {
+    "source_url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz",
+    "world3_variable": "(comparison only)",
+    "description": "UN WPP2024 Medium-variant PROJECTION, never used as a calibration target",
+    "columns": [
+      "Year",
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "total"
+    ],
+    "year_min": 2024,
+    "year_max": 2100,
+    "rows": 77,
+    "fetched_utc": "2026-10-10T05:28:49Z"
+  }
+}
